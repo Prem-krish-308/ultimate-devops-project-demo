@@ -37,7 +37,8 @@ jobs:
 
   code-quality:
     runs-on: ubuntu-latest
-
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
     steps:
       - name: checkout code
         uses: actions/checkout@v4
@@ -48,7 +49,7 @@ jobs:
           go-version: '1.22'
       
       - name: Run golangci-lint
-        uses: golangci/golangci-lint-action@v7
+        uses: golangci/golangci-lint-action@v6
         with:
           version: v1.55.2
           args: --timeout=5m
