@@ -13,7 +13,6 @@ import (
 	"strconv"
 	"sync"
 	"time"
-
 	"go.opentelemetry.io/otel/attribute"
 	semconv "go.opentelemetry.io/otel/semconv/v1.24.0"
 	"go.opentelemetry.io/otel/trace"
